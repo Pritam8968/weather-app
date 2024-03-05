@@ -1,0 +1,153 @@
+/* Variables */
+:root {
+	--background-color: #222;
+	--primary-color: #3b5998; /* Deep Blue */
+	--secondary-color: #66a3ff; /* Sky Blue */
+	--accent-color: #aed6f1; /* Light Blue */
+	--text-color: #fff; /* White */
+	--text-muted-color: #222; /* Medium Gray */
+	--error-color: #cc3300; /* Reddish Brown */
+}
+
+/* Global Styles */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'poppins', sans-serif;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	background-color: var(--background-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow-x: hidden;
+	height: 100dvh;
+	max-height: 110dvh;
+	position: relative;
+	color: var(--text-color);
+}
+.card {
+	width: 90%;
+	max-width: 48rem;
+	background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+	margin: 2.4rem;
+	padding: 4.8rem 3.2rem;
+	border-radius: 2rem;
+	text-align: center;
+}
+.search {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+.search form {
+	width: 100%;
+	display: flex;
+	gap: 1.6rem;
+}
+.search input {
+	border: none;
+	outline: none;
+	background-color: var(--accent-color);
+	padding: 1.2rem 2.4rem;
+	height: 4.8rem;
+	border-radius: 30px;
+	flex: 1;
+	font-size: 1.8rem;
+	font-weight: 500;
+}
+.search button {
+	border: none;
+	outline: none;
+	background-color: #ebfffc;
+	width: 4.8rem;
+	height: 4.8rem;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.search button img {
+	width: 2.4rem;
+}
+.weather-icon {
+	width: 17rem;
+	margin-top: 3.6rem;
+}
+.temp {
+	font-size: 8.6rem;
+	font-weight: 500;
+}
+.city {
+	font-size: 4.4rem;
+	font-weight: 400;
+	margin-top: -1rem;
+}
+.details {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 2.4rem;
+	margin-top: 3.2rem;
+}
+.col {
+	display: flex;
+	align-items: center;
+	text-align: left;
+	font-size: 1.8rem;
+}
+.col img {
+	width: 4.8rem;
+	margin-right: 1rem;
+}
+.humidity,
+.wind {
+	font-size: 2.4rem;
+	font-weight: 500;
+	margin-bottom: 0.5rem;
+}
+
+.weather {
+	transition: all 1s, ease;
+}
+.hidden {
+	display: none;
+}
+.show {
+	display: block;
+}
+
+.error {
+	margin-top: 1rem;
+	font-size: 1.8rem;
+	color: red;
+}
+
+footer {
+	position: absolute;
+	font-size: 1.8rem;
+	bottom: 1rem;
+}
+/* Media Queries for Mobile Devices */
+@media only screen and (max-width: 40rem) {
+	html {
+		font-size: 50%;
+	}
+	.search input {
+		flex: none; /* Prevent input from stretching */
+		width: calc(100% - 8rem); /* Adjust width to fit within available space */
+		height: 6.4rem;
+	}
+	.search button {
+		width: 6.4rem;
+		height: 6.4rem;
+	}
+	.details {
+		padding: 0 1.8rem;
+	}
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weather App</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="apple-touch-icon" sizes="180x180" href="./images/favicon_io/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_io/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon_io/favicon-16x16.png" />
+		<link rel="manifest" href="./images/favicon_io/site.webmanifest" />
+
+		<link rel="stylesheet" href="style.css" />
+		<script type="module" defer src="script.js"></script>
+	</head>
+	<body>
+		<div class="card">
+			<div class="search">
+				<form>
+					<input type="text" placeholder="Enter City Name" spellcheck="false" />
+					<button><img src="./images/search.png" alt="search icon" /></button>
+				</form>
+			</div>
+			<div class="error hidden">
+				<p>Invalid City Name</p>
+			</div>
+			<div class="weather hidden">
+				<img src="./images/rain.png" alt="weather icon" class="weather-icon" />
+				<div class="temp">22°C</div>
+				<div class="city">Malda</div>
+				<div class="details">
+					<div class="col">
+						<img src="./images/humidity.png" alt="Humidity icon" />
+						<div>
+							<p class="humidity">55%</p>
+							<p>Humidity</p>
+						</div>
+					</div>
+					<div class="col">
+						<img src="./images/wind.png" alt="wind icon" />
+						<div>
+							<p class="wind">15km/h</p>
+							<p>Wind Speed</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<p>Made with ❤️ by Πρίταμ</p>
+		</footer>
+	</body>
+</html>
